@@ -141,10 +141,6 @@ python llm.py --data data --method deepseek --dry-run
 Each method writes `predictions.csv` and `metrics.json` to `outputs/<method>/` by default.
 Use `--output` to choose another directory.
 When `Y_test.csv` is provided, metrics include MSE, R², MedAE, and P95.
-MedAE and P95 are the median and 95th percentile of per-sample MAE.
-LLM request previews are saved as `request.json`.
-Curated LLM and TabGen-ICL also write `generation_log.json`.
-Deep tabular models save their per-target checkpoints under the output directory.
 
 ## Acknowledgments
 
