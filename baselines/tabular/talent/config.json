@@ -1,0 +1,32 @@
+{
+  "ft-transformer": {
+    "model": {
+      "token_bias": true, "n_layers": 3, "d_token": 192, "n_heads": 8,
+      "d_ffn_factor": 1.3333333333333333, "attention_dropout": 0.2,
+      "ffn_dropout": 0.1, "residual_dropout": 0.0, "activation": "reglu",
+      "prenormalization": false, "initialization": "kaiming",
+      "kv_compression": null, "kv_compression_sharing": null
+    },
+    "training": {"lr": 0.0001, "weight_decay": 0.00001}
+  },
+  "danets": {
+    "model": {"base_outdim": 64, "n_layers": 20, "dropout": 0.1},
+    "training": {"lr": 0.0001, "weight_decay": 0.0002},
+    "general": {"k": 5, "virtual_batch_size": 256}
+  },
+  "switchtab": {
+    "model": {"num_heads": 2, "alpha": 1.0},
+    "training": {"lr": 0.0003, "weight_decay": 0.0002}
+  },
+  "modernnca": {
+    "model": {
+      "dim": 128, "dropout": 0.1, "d_block": 512, "n_blocks": 0,
+      "temperature": 1, "sample_rate": 0.5,
+      "num_embeddings": {
+        "type": "PLREmbeddings", "n_frequencies": 77,
+        "frequency_scale": 0.04431360576139521, "d_embedding": 34, "lite": true
+      }
+    },
+    "training": {"lr": 0.01, "weight_decay": 0.0002}
+  }
+}
